@@ -6,8 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
-
-import ch.qos.logback.core.model.Model;
+import org.springframework.ui.Model;
 
 @Controller
 public class BookController {
@@ -34,7 +33,7 @@ public class BookController {
             "<BR>"+ "著者:" + bean.getWritter() + "<BR>" + "出版社:" + bean.getPublisher() + 
             "<BR>"+ "価格:" + bean.getPrice() + "<BR><HR>");
         }
-        mv.addObject("msg", buff.toString());
+    mv.addObject("msg", buff.toString());
     return mv;
     }
 }
